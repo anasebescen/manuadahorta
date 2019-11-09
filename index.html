@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantas Companheiras</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+    <style media="screen">
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="#">PROTÓTIPO - Manual da horta</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarAll">
+        <ul class="navbar-nav ml-auto" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" href="#pesquisa">Pesquise uma planta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dicionario">Dicionário</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#referencias">Livros e outras fontes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Fala com a gente</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div  data-spy="scroll" data-target="#navbarAll" data-offset="30">
+
+      <div id="pesquisa" class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5" id="plant">
+              <div class="form-group">
+                <h3 for="exampleInputEmail1">Lista de plantas <small>🌱</small></h3>
+                <p>Selecione uma planta e veja quais são companheiras e quais são antagônicas. <a href="#dicionario">O que é isso?</a> </p>
+                <input type="text" class="form-control search" placeholder="Pesquisa por *Alface* e clica nele...">
+              </div>
+              <ul class="list-group list" style="max-height: 200px; overflow:auto">
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Abacate</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Abóbora</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Abobrinha</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Acelga</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Aipo (ou salsão)</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Alcachofra</span></a>
+                <a id="clicouAlface" href="#" class="list-group-item list-group-item-action"><span class="name">Alface</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Alfafa</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Almeirão</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Aspargo</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Berinjela</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Bertalha (Basella rubra)</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Brócolis</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Cebola</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Alho</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Alho poró</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Chicória</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Chuchu</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Couve</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Couve-de-bruxelas</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Couve-flor</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Couve-galega</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Endívia</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Funcho</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Espinafre</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Feijão</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Ervilha</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Fava</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Guandu</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Lentilha</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Feijão-preto</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Soja</span></a>
+                <a href="#" class="list-group-item list-group-item-action"><span class="name">Vagem</span></a>
+              </ul>
+              <small id="emailHelp" class="form-text text-muted mt-4">Não achou sua planta? <a href="#contato">Escreve pra gente.</a> </small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="alface" class="d-none">
+        <section>
+          <div class="container">
+            <h1 class="mb-0">
+              Alface <small>🥬</small>
+            </h1>
+            <small><em>Cichoriaceae</em></small>
+          </div>
+        </section>
+
+        <section class="mb-5">
+          <div class="container pb-5">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="mt-3 mb-0">Me dou bem <small>❤️</small></h3>
+                <small><a href="#">Plantas companheiras</a></small>
+                <table class="table table-bordered mt-3 table-responsive-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Planta
+                      </th>
+                      <th scope="col">Motivo</th>
+                      <th scope="col">Distância <small>(de plantio)</small></th>
+                      <th scope="col">Artigos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#">Cenoura</a>
+                        <small class="disabled d-block" ><em>Umbelíferas</em></small>
+                      </td>
+                      <td class="align-middle">Ele curte meu cheiro</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Aipo</a>
+                        <small class="disabled d-block" ><em>Umbelíferas</em></small></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Erva-doce</a>
+                        <small class="disabled d-block" ><em>Umbelíferas</em></small></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Batata-salsa</a>
+                        <small class="disabled d-block" ><em>Umbelíferas</em></small></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Alho</a>
+                        <small class="disabled d-block" ><em>Liliáceas</em></small></td>
+                      <td class="align-middle">Espanto as moscas danadas</td>
+                      <td></td>
+                      <td class="align-middle"><a href="#"><i id="artigo_alface_alho" class="far fa-newspaper" data-toggle="tooltip" data-placement="top" title="Vai pra página do artigo científico que fala sobre esse consórcio"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Cebola</a>
+                        <small class="disabled d-block" ><em>Liliáceas</em></small></td>
+                      <td class="align-middle">Espanto as moscas danadas</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <h3 class="mt-3 mb-0">Não me dou bem <small>🌵‍</small></h3>
+                <small><a href="#">Plantas antagônicas</a></small>
+                <table class="table table-bordered mt-3">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Planta
+                      </th>
+                      <th scope="col">Motivo</th>
+                      <th scope="col">Artigos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#">Salsa</a>
+                        <small class="disabled d-block" ><em>Quenopodiáceas</em></small>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Girassol</a>
+                        <small class="disabled d-block" ><em>Família</em></small>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <h3 class="mt-3 mb-0">Plante no meu lugar <small>🌾‍</small></h3>
+                <small><a href="#">Sucessão de culturas</a></small>
+                <table class="table table-bordered mt-3">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Planta
+                      </th>
+                      <th scope="col">Artigos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#">Nome da planta</a>
+                        <small class="disabled d-block" ><em>Família</em></small>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Nome da planta</a>
+                        <small class="disabled d-block" ><em>Família</em></small>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="mensagemVazia">
+        <div class="container pt-5 pb-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center text-black-50">
+              🌱
+              <h3>Pesquisa por uma planta lá em cima ;)</h3>
+              <p>A gente vai mostrar com quem ela se dá bem e com quem não se dá tão assim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <section id="dicionario">
+        <div class="container pt-5 pb-5">
+          <div class="row">
+            <div class="col-12">
+              <h3>Dicionário</h3>
+              <p>O que significa cada coisa.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Plantas companheiras</h5>
+                  <p class="card-text">São plantas de diferentes famílias que se ajudam, quanto à umidade do solo e nutrientes, ou que tem efeito alelopático repelente, ou seja,  mantem longe insetos e proliferação de fungos comuns à planta companheira.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Plantas antagônicas</h5>
+                  <p class="card-text">São aquelas que, oposto das companheiras, desfavorecem a planta que foi plantada próximo. Tanto na captura de nutrientes quanto à ação aérea da planta.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Sucessão de culturas</h5>
+                  <p class="card-text">Quando um ciclo de cultivo é finalizado, o solo está sobrecarregado ou em falta de certos nutrientes, com PH mais básico ou ácido. Aí entram as plantas que farão a recuperação desse solo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a href="#" class="btn btn-primary">Veja mais conceitos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="referencias" class="mt-5 mb-5">
+        <div class="container pt-5 pb-5">
+          <div class="row">
+            <div class="col-12">
+              <h3>Livros e outras fontes</h3>
+              <p>Veja os materiais que usamos como referência para nosso trabalho.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="https://via.placeholder.com/100x50" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Nome do livro</h5>
+                  <p class="card-text">Descrição do livro</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="https://via.placeholder.com/100x50" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Nome do livro</h5>
+                  <p class="card-text">Descrição do livro</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="https://via.placeholder.com/100x50" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Nome do livro</h5>
+                  <p class="card-text">Descrição do livro</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="bg-light pt-5 pb-5">
+        <div class="container pt-5 pb-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <h3>Fala com a gente</h3>
+              <p><b>Encontrou algo que não faz sentido, quer mandar uma sugestão ou apenas semear amor?</b><br>Manda uma mensagem pra gente. Tentaremos responder o mais rápido possível, entre hortas e internet.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nome completo</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">E-mail</label>
+                <input type="email" class="form-control">
+                <small id="emailHelp" class="form-text text-muted">Não enviaremos spam. Pedimos seu e-mail apenas pra te responder.</small>
+              </div>
+              <div class="form-group">
+                <label for="plantaEspecifica">É sobre alguma planta específica?</label>
+                <select multiple class="form-control" id="plantaEspecifica">
+                  <option>Abacate</option>
+                  <option>Abóbora</option>
+                  <option>Abobrinha</option>
+                  <option>Acelga</option>
+                  <option>Aipo (ou salsão)</option>
+                  <option>Alcachofra</option>
+                  <option>Alface</option>
+                  <option>Alfafa</option>
+                  <option>Almeirão</option>
+                  <option>Aspargo</option>
+                  <option>Berinjela</option>
+                  <option>Bertalha (Basella rubra)</option>
+                  <option>Brócolis</option>
+                  <option>Cebola</option>
+                  <option>Alho</option>
+                  <option>Alho poró</option>
+                  <option>Chicória</option>
+                  <option>Chuchu</option>
+                  <option>Couve</option>
+                  <option>Couve-de-bruxelas</option>
+                  <option>Couve-flor</option>
+                  <option>Couve-galega</option>
+                  <option>Endívia</option>
+                  <option>Funcho</option>
+                  <option>Espinafre</option>
+                  <option>Feijão</option>
+                  <option>Ervilha</option>
+                  <option>Fava</option>
+                  <option>Guandu</option>
+                  <option>Lentilha</option>
+                  <option>Feijão-preto</option>
+                  <option>Soja</option>
+                  <option>Vagem</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contaPaNois">Conta pra gente</label>
+                <textarea class="form-control" id="contaPaNois" rows="5"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Enviar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="fixed-footer">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-12 text-center">
+            Feito com amor e agrofloresta. Gratuito pra sempre.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <div class="container">
+      <h1>Plantas</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody id="app">
+          <planta-component v-for="planta in plantas" :planta="planta"/>
+        </tbody>
+      </table>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        var options = { valueNames: [ 'name' ] };
+        var plantList = new List('plant', options);
+        $('#artigo_alface_alho').tooltip();
+
+        // mostra o mapa do Alface
+        $("#clicouAlface").click(function(){
+          $("#alface").removeClass("d-none");
+          $("#mensagemVazia").addClass("d-none");
+        });
+
+        // pega altura da navbar
+        var navbarHeight = $("nav").outerHeight();
+        $("#pesquisa").css("margin-top", navbarHeight + "px");
+      });
+    </script>
+
+    <!-- <script src="index.js"></script> -->
+  </body>
+</html>
